@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p4</title>
+</head>
+
+<body>
+    <script>
+        function insertElement(arr, value, pos) {
+            let newArray = [];
+            for (let i = 0; i < arr.length + 1; i++) {
+                if (i < pos) {
+                    newArray[i] = arr[i];
+                } else if (i === pos) {
+                    newArray[i] = value;
+                } else {
+                    newArray[i] = arr[i - 1];
+                }
+            }
+            return newArray;
+        }
+
+        let arr = [10, 20, 30, 40, 50];
+        let value = 25;
+        let pos = 2;
+        let result = insertElement(arr, value, pos);
+        console.log(result);
+    </script>
+</body>
+
+</html>
