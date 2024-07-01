@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print 1 to n number</title>
+</head>
+
+<body>
+
+    <script>
+
+        console.log("Print 1 to 10 :- ");
+
+        function print(no) {
+            console.log(no);
+
+            let newNumber = no + 1;
+            if (newNumber <= 10) {
+                print(newNumber);
+            }
+        }
+
+        print(1);
+
+    </script>
+
+    <script>
+        console.log("Print 10 to 1 :- ");
+
+        function Demo(no) {
+            console.log(no);
+
+            let newNumber = no - 1;
+
+            if (newNumber > 0) {
+                Demo(newNumber);
+            }
+        }
+
+        Demo(10);
+
+    </script>
+
+</body>
+
+</html>

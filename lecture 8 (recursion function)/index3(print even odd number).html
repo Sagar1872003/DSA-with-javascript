@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>print even and odd number</title>
+</head>
+
+<body>
+    <script>
+        console.log("even number");
+        let end = prompt('Enter ending point');
+        let even = [];
+        let odd =[];
+
+        function demo(num, endpoint) {
+            if (num <= endpoint) {
+                if (num % 2 == 0) {
+                    even.push(num);
+                }
+                else{
+                    odd.push(num);
+                }
+                let newNumber = num + 1;
+                demo(newNumber, endpoint);
+            }
+        }
+
+        demo(1, end);
+        console.log(even);
+        console.log(odd);
+
+    </script>
+</body>
+
+</html>
