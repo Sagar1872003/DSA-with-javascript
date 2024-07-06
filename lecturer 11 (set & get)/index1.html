@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+         const letters = new Set(["a"]);
+
+letters.add("b");
+letters.add("c");
+letters.add("e");
+letters.add("d");
+
+console.log(letters);
+
+console.log( letters.has("b"));
+
+letters.delete("c")
+
+console.log(letters);
+
+// letters.clear("a");
+
+// console.log(letters)
+
+// to show and commper each element of letters and b and 
+//using for of we can give value of leeters to b variable
+for(let b of letters.entries()){
+    console.log(b);
+}
+
+// olny c variable value show do not show letters value
+for(let c of letters){
+    console.log(c);
+}
+
+// to show array size
+console.log(letters.size);
+
+// easily enumerate a set by using "forEach."
+// The code prints each element of the set like this:
+letters.forEach((letter) => {
+    console.log(letter)
+});
+
+
+// map method
+
+console.log("map method");
+
+const players = new Map([['key','value'],['small','medium'],['fruit','another']]);
+
+console.log(players.entries());
+
+// keys method
+
+for(const player of players.keys()){
+  console.log(player);
+}
+
+// to print value 
+for(const player of players.values()){
+  console.log(player);
+}
+
+// to print using foreach loop
+// The forEach method of the Map object is used to iterate over each key-value pair.
+// In the callback function passed to forEach, the parameters key and value are used. It's important to note that forEach in a Map takes the parameters in the order (value, key), so key here actually represents the value and value represents the key.
+players.forEach((key, value) =>{
+  const message = `I want to be remeembered as the best ${key} pair ${value}`;
+    console.log(message)
+})
+
+    </script>
+</body>
+</html>

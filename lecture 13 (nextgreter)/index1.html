@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1, 11, 2, 20, 35, 65, 5 ,-5 ,-2];
+        
+        for (let i=0; i<arr.length; i++){
+            let next = false;
+            for(let j=i+1; j<arr.length; j++){
+                if(arr[i] < arr[j]) {
+                    next = arr[j];
+                }
+                break;
+            }
+            console.log(`${arr[i]} --> ${next}`);
+        }
+       
+        
+    </script>
+</body>
+</html>
