@@ -1,0 +1,51 @@
+<script>
+    class Queue {
+        constructor(){
+            this.item= []
+        }
+        enqueue(value){
+            this.item.push(value);
+        }
+        dequeue(){
+            if(this.empty()){
+               console.log("queue is empty");
+               return false; 
+            }
+            return this.item.shift()
+        }
+        front(){
+            if(this.empty()){
+                console.log("queue is empty");
+                return false;
+            }
+            return this.item[0];
+        }
+        size(){
+            return this.item.length;
+        }
+        empty(){
+            return this.item.length === 0;
+        }
+        print(){
+            for(let i=0;i<this.item.length; i++){
+                console.log(this.item[i]);
+            }
+        }
+    }
+    let queue =new Queue;
+    queue.enqueue(10);
+    queue.enqueue(20);
+    queue.enqueue(30);
+    queue.enqueue(40);
+
+
+    console.log("remoove first element");
+    console.log(queue.dequeue());
+    console.log("show first element");
+    console.log(queue.front());
+    console.log("show size of array");
+    console.log(queue.size());
+    console.log("print all element");
+    console.log(queue.print());
+
+</script>

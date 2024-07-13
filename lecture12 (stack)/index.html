@@ -45,9 +45,11 @@
                 return this.items.length;
             }
 
-            // Print the stack elements
+            // Print the stack elements using for loop
             printStack() {
-                console.log(this.items.join(' '));
+                for (let i = 0; i < this.items.length; i++) {
+                    console.log(this.items[i]);
+                }
             }
         }
 
@@ -58,15 +60,22 @@
         stack.push(20);
         stack.push(30);
         stack.push(40);
+        stack.push(50);
+    
+        console.log("remove the last element ");
+        console.log(stack.pop()); 
 
-        console.log(stack.pop());    // Outputs: 30
+        console.log("print value");
         stack.printStack();
 
-        console.log(stack.peek());   // Outputs: 20
-        console.log(stack.isEmpty()); // Outputs: false
-        console.log(stack.size());    // Outputs: 2
-
-        stack.printStack();          // Outputs: 10 20
+        console.log("show last element");
+        console.log(stack.peek());
+        console.log("show the array empty or not");
+        console.log(stack.isEmpty());
+        console.log("show the size of the array");
+        console.log(stack.size()); 
+        console.log("print all value");
+        stack.printStack();
     </script>
 </body>
 

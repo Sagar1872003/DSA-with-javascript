@@ -51,7 +51,7 @@ letters.forEach((letter) => {
 
 console.log("map method");
 
-const players = new Map([['key','value'],['small','medium'],['fruit','another']]);
+const players = new Map([['sagar','makwana'],['nikhil','ladani'],['keyur','vora']]);
 
 console.log(players.entries());
 
@@ -70,7 +70,7 @@ for(const player of players.values()){
 // The forEach method of the Map object is used to iterate over each key-value pair.
 // In the callback function passed to forEach, the parameters key and value are used. It's important to note that forEach in a Map takes the parameters in the order (value, key), so key here actually represents the value and value represents the key.
 players.forEach((key, value) =>{
-  const message = `I want to be remeembered as the best ${key} pair ${value}`;
+  const message = `hiii my name is ${key} ${value}`;
     console.log(message)
 })
 
